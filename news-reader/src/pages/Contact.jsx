@@ -6,8 +6,8 @@ export default function Contact() {
         Have feedback or questions about the News Reader App? Feel free to reach out!
       </p>
       <ul className="text-gray-700 space-y-2">
-        <li>Email: <a href="mailto:ganiyu@example.com" className="text-primary hover:underline">ganiyu@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">github.com/yourusername</a></li>
+        <li>Email: <a href="mailto:lganiyu43@gmail.com" className="text-primary hover:underline">lganiyu43@mail.com</a></li>
+        <li>GitHub: <a href="https://github.com/luckymen49" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">github.com/luckymen49</a></li>
       </ul>
     </div>
   );
