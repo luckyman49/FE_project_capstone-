@@ -7,11 +7,11 @@ import LoadingSkeleton from "./components/LoadingSkeleton";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import ArticleDetail from "./pages/ArticleDetail"; // NEW import
+import ArticleDetail from "./pages/ArticleDetail";
 
 function Home({ articles, loading, error }) {
   return (
-    <main className="flex-grow p-6">
+    <main className="flex-grow w-full max-w-5xl p-6">
       {error && <p className="text-red-500 mb-4">{error}</p>}
       {loading ? <LoadingSkeleton /> : <NewsList articles={articles} />}
     </main>
@@ -65,13 +65,14 @@ function App() {
 
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen items-center">
         <Header onSearch={handleSearch} onCategory={handleCategory} />
         <Routes>
           <Route
             path="/"
             element={<Home articles={articles} loading={loading} error={error} />}
           />
+
           <Route
             path="/article/:id"
             element={<ArticleDetail articles={articles} />}

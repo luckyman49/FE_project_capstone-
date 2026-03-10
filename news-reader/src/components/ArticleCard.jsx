@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-
-export default function ArticleCard({ article, index }) {
+export default function ArticleCard({ article }) {
   return (
-    <div className="bg-white rounded-lg shadow hover:shadow-lg transition p-4 flex flex-col">
+    <div className="bg-white rounded-lg shadow p-4 flex flex-col">
       {article.urlToImage && (
         <img
           src={article.urlToImage}
@@ -10,21 +8,16 @@ export default function ArticleCard({ article, index }) {
           className="h-40 w-full object-cover rounded mb-4"
         />
       )}
-
-      <h2 className="text-lg font-bold font-sans text-secondary mb-2">
-        {article.title}
-      </h2>
-
-      <p className="text-sm text-gray-700 font-sans flex-grow">
-        {article.description || "No description available."}
-      </p>
-
-      <Link
-        to={`/article/${index}`}
-        className="mt-4 inline-block bg-primary text-white px-4 py-2 rounded hover:bg-blue-700 font-sans text-sm text-center"
+      <h2 className="text-lg font-bold mb-2">{article.title}</h2>
+      <p className="text-sm text-gray-700 mb-4">{article.description}</p>
+      <a
+        href={article.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary hover:underline mt-auto"
       >
-        Read More
-      </Link>
+        Read more
+      </a>
     </div>
   );
 }
